@@ -1,0 +1,129 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: #3877ab
+}
+.root{
+    width: 70%;
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.root__titulo{
+text-align: center;
+width: 100%;
+color: #10e5fc;
+margin: 3% 0;
+}
+
+.user{
+    width: 200px;
+    background: #10e5fc;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 4%;
+}
+
+.user__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 12vh;
+    margin: 0 auto;
+    margin-top: 20%;
+    border-radius: 50%;
+    border: #fff 3px solid;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.user__avatar{
+    width:100%;
+    cursor: pointer;
+}
+
+.user__datos{
+    background-color: #fff;
+    width: 90%;
+    margin-top: -20%;
+    padding:20% 5%;
+    padding-bottom: 15%;
+    text-align: center;
+}
+
+.name{
+    font-weight: bold;
+    font-size: 100%;
+    margin: 5%;
+}
+
+.email{
+    font-size:70%;
+    color: #8c8c8c;
+}
+
+
+.modal {
+    display: none; /* Por defecto, estará oculto */
+    position: fixed; /* Posición fija */
+    z-index: 3; /* Se situará por encima de otros elementos de la página*/
+    padding-top: 5%; /* El contenido estará situado a 200px de la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 95%; /* Algura completa */
+    overflow: auto; /* Se activará el scroll si es necesario */
+    background-color: rgba(0,0,0,0.5); /* Color negro con opacidad del 50% */
+    cursor: pointer;
+}
+  
+  /* Ventana o caja modal */
+  .contenido-modal {
+    position: relative; /* Relativo con respecto al contenedor -modal- */
+    background-color: white;
+    margin: auto; /* Centrada */
+    padding: 5px;
+    width: 30%;
+    min-width: 300px;
+    animation-name: zoom;
+    animation-duration: 0.5s;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .ventanaModal__img{
+    width: 100%;
+  }
+
+  .imgzoom{
+    width: 100%;
+  }
+  
+  /* Animación */
+  
+  @keyframes zoom {
+    from {width: 0; opacity:0}
+    to {width: 30%; opacity:1}
+  }
+  
+  .contenido-modal__name{
+    text-align: center;
+    width: 100%;
+  }
+  
+  .contenido-modal__email{
+    text-align: center;
+    width: 100%;
+    font-size:80%;
+    color: #8c8c8c;
+  }
